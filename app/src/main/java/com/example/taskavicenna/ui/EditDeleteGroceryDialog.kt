@@ -1,0 +1,42 @@
+import android.content.Context
+import android.view.LayoutInflater
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import com.example.taskavicenna.databinding.DialogEditDeleteGroceryBinding
+
+class EditDeleteGroceryDialog(
+    context: Context,
+    private val onEditClicked: (name: String, quantity: String) -> Unit,
+    private val onDeleteClicked: () -> Unit
+) {
+    private val binding: DialogEditDeleteGroceryBinding // Use your actual binding class
+    private val dialog: AlertDialog
+
+    init {
+        val builder = AlertDialog.Builder(context)
+        binding = DialogEditDeleteGroceryBinding.inflate(LayoutInflater.from(context))
+        builder.setView(binding.root)
+        dialog = builder.create()
+
+        binding.buttonUpdate.setOnClickListener {
+            val name = binding.editTextName.text.toString()
+            val quantity = binding.editTextQuantity.text.toString()
+
+            if (name.isNotEmpty() && quantity.isNotEmpty()) {
+                onEditClicked(name, quantity)
+                dialog.dismiss()
+            } else {
+                Toast.makeText(context, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        binding.buttonDelete.setOnClickListener {
+            onDeleteClicked()
+            dialog.dismiss()
+        }
+    }
+
+    fun show() {
+        dialog.show()
+    }
+}

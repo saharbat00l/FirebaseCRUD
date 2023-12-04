@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "637057718394",
+    "project_id": "task-avicenna",
+    "storage_bucket": "task-avicenna.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637057718394:android:4d41f5c06403d899df43c3",
+        "android_client_info": {
+          "package_name": "com.example.taskavicenna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdOVfwMSEI6rTUU7MjyEmDOjjMVzRr0zU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
