@@ -2,8 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TaskAvicenna" parent="Theme.Material3.Light">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">#FFC107</item>
+        <item name="android:statusBarColor">#000000</item>
+
     </style>
+
 
     <style name="Theme.TaskAvicenna" parent="Base.Theme.TaskAvicenna" />
 </resources>

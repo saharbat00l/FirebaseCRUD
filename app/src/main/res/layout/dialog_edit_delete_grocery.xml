@@ -21,13 +21,14 @@
         android:id="@+id/buttonUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#616160"
+        android:backgroundTint="#FFC107"
         android:text="Update" />
 
     <Button
         android:id="@+id/buttonDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#F44336"
+        android:backgroundTint="#ffffff"
+        android:textColor="#F44336"
         android:text="Delete" />
 </LinearLayout>
