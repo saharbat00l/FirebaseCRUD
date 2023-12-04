@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     private fun showAddDialog() {
         val addDialog = AddGroceryDialog(this) { name, quantity ->
             val groceryItem = GroceryItem(name = name, quantity = quantity, imageUrl = "")
-            groceryViewModel.addGroceryItem(groceryItem.toString())
+            groceryViewModel.addGroceryItem(groceryItem)
             Toast.makeText(this, "Item added successfully", Toast.LENGTH_SHORT).show()
         }
         addDialog.show()

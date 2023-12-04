@@ -41,9 +41,8 @@ class GroceryRepository {
         return liveData
     }
 
-    fun addGroceryItem(name: String, quantity: String, imageUrl: String) {
+    fun addGroceryItem(groceryItem: GroceryItem) {
         val groceryItemRef = database.reference.child("grocery_items").push()
-        val groceryItem = GroceryItem("", name, quantity, imageUrl)
         groceryItemRef.setValue(groceryItem)
     }
 

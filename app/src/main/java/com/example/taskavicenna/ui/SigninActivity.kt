@@ -21,6 +21,8 @@ class SigninActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySigninBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
+
 
         signInViewModel = ViewModelProvider(this).get(SignInViewModel::class.java)
 

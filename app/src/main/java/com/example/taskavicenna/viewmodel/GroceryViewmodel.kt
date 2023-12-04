@@ -12,8 +12,8 @@ class GroceryViewModel : ViewModel() {
 
     val groceryItems: LiveData<List<GroceryItem>> = repository.getGroceryItems()
 
-    fun addGroceryItem(name: String, quantity: String = "", imageUrl: String ="") {
-        repository.addGroceryItem(name, quantity, imageUrl)
+    fun addGroceryItem(groceryItem: GroceryItem) {
+        repository.addGroceryItem(groceryItem)
     }
 
     fun updateGroceryItem(groceryItem: GroceryItem) {
